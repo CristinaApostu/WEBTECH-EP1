@@ -3,16 +3,72 @@
 <head>
 <title>This is my personal profile</title>
 <style>
-    .mainContent{background-color:orchid;
+    #mainContent{background-color:orchid;
     font-family:Arial;
+    padding:10px;
+    border-radius:50px;
+     }
+     p{background-color:pink;
+     font-family:Verdana;
+     font-style: italic;
+     text-decoration: underline;}
+     
+     .button:hover{
+         background-color: orange;
+         height:25px;
+         width:70px;
+     }
+     .button:active{
+       background-color: lime;  
+         height:25px;
+         width:70px;
+     }
+     .button{
+      background-color: gray;  
+         height:25px;
+         width:70px;
      }
      
 </style>
 </head>
 <body>
-    <div class="mainContent">
+    <div id="mainContent">
     <h1>Cristina Apostu</h1>
-<p>Acesta este un paragraf de text</p>
+<p>Acesta este primul paragraf </p>
+<p>Acesta este al doilea paragraf</p>
 </div>
+<div id ="mainContent">
+    <button id="btFr" class = "button">Franceza</button>
+     <button id="btEs" class = "button">Spaniola</button>
+      <button id ="btRo"class = "button">Romana</button>
+       <button id="btEn" class = "button">Engleza</button>
+       <p id ="hello"><b>?</b></p>
+       <script>
+         var text =document.getElementById("hello");  
+          var b1 =document.getElementById("btFr"); 
+           var b2 =document.getElementById("btEs"); 
+            var b3 =document.getElementById("btRo"); 
+             var b4 =document.getElementById("btEn"); 
+             
+             b1.addEventListener('click', scrie_fr, false);
+              b2.addEventListener('click', scrie_es, false);
+               b3.addEventListener('click', scrie_ro, false);
+                b4.addEventListener('click', scrie_en, false);
+                
+                function scrie_fr(){
+                text.textContent="Bonjour a tous!";
+                }
+                 function scrie_es(){
+                text.textContent="Hola a todos!";
+                }
+                 function scrie_ro(){
+                text.textContent="Buna tuturor!";
+                }
+                 function scrie_en(){
+                text.textContent="Hello, world!";
+                }
+       </script>
+</div>
+
 </body>
 </html>
